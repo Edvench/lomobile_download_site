@@ -6,13 +6,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { TestComponent } from './components/test/test.component';
+import { PreloaderComponent } from './components/preloader/preloader.component';
 // import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
     AppComponent,
     SliderComponent,
-    TestComponent
+    TestComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,

@@ -4,10 +4,10 @@
       <h1>LOMOBIL</h1>
     </div>
     <div class="content">
-      <app-slider></app-slider>
+      <app-slider *ngIf="gallery"></app-slider>
+      <app-preloader *ngIf="loading"></app-preloader>
     </div>
   </div>
-  
 </div>
 
 
