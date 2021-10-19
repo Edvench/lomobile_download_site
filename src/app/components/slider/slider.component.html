@@ -1,8 +1,23 @@
-<!-- <p>dedses</p>
-<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
-    <div ngxSlickItem *ngFor="let photo of gallery; index as i" class="slide">
-      <div class="img-box">
-        <img [src]="photo.path" width="232px" height="165px">
-      </div>
+<div class="photo_wrap">
+  <div class="gallery">
+
+    <div *ngFor="let photo of gallery; index as i" class="photo">
+      <img [src]="photo.path">
+      <img src="../../../assets/img/svg/close.svg" class="img_delete" (click)="deleteEl(photo,i)">
     </div>
-  </ngx-slick-carousel> -->
+  </div>
+  <div class="btn_add">
+    <button>
+      <i class="icon icon-download"></i>
+      <span>Добавить фотографии</span>
+    </button>
+  </div>
+</div>
+<div class="download">
+  <div class="btn_wrap">
+    <button>
+      <i class="icon icon-download"></i>
+      <span>Загрузить</span>
+    </button>
+  </div>
+</div>

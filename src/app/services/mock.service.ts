@@ -9,7 +9,4 @@ export class MockService {
 
   constructor(private http:HttpClient) { }
 
-  public getPhotoJSON():Observable<any>{
-    return this.http.get<any>('./assets/mocks/photo.json')
-  }
 }
