@@ -26,8 +26,14 @@ export class AppComponent {
 
         case 'status':
         this.gallery = false;
+        this.loading = true 
         setTimeout(() => {
-          this.loading = true 
+          this.loading = false;
+          this.success = true;
+          setTimeout(() => {
+            this.success = false;
+            this.main = true
+          }, 3000);
         }, 3000);
         
 

@@ -63,46 +63,10 @@
     }
 }
 
-.download {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background: #ffffff;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    .btn_wrap {
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        padding: 16px;
-        background: #ffffff;
-        box-shadow: 0px 12px 24px rgba(3, 74, 104, 0.12);
-        button {
-            width: 100%;
-            max-height: 88px;
-            height: 88px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: none;
-            background: #ffffff;
-            box-shadow: 0px 12px 24px rgb(3 74 104 / 12%);
-            border-radius: 24px;
-            span {
-                font-family: Panton;
-                font-weight: 600;
-                font-size: 22px;
-                line-height: 24px;
-            }
-            i {
-                margin-right: 12px;
-            }
-        }
-    }
-}
+
 
 .photo_wrap{
-    height: 60%;
+    height: 50%;
     overflow: scroll;
     overflow-x:hidden;
 }
