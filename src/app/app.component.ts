@@ -7,9 +7,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lomobsite';
-  public loading:boolean = true;
-  public gallery:boolean = false;
-  public main:boolean = false;
-  public error:boolean = false;
-  public success:boolean = false;
+  public main: boolean = false;
+  public loading: boolean = false;
+  public gallery: boolean = false;
+  public error: boolean = false;
+  public success: boolean = false;
+
+  ngOnInit(): void {
+    this.main = true;
+  }
+
+  public navigate(rout: string): void {
+    switch (rout) {
+      case 'gallery':
+        this.main = false;
+        this.gallery = true;
+        break;
+
+        case 'status':
+        this.gallery = false;
+        setTimeout(() => {
+          this.loading = true 
+        }, 3000);
+        
+
+        break;
+
+      default:
+        break;
+    }
+  }
 }

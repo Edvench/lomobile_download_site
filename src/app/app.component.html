@@ -19,7 +19,7 @@
             <span>Выберите фотографии для загрузки в Lomobil</span>
           </div>
           <div class="btn btn_wrap">
-            <button>
+            <button (click)="navigate('gallery')">
               <i class="icon icon-download"></i>
               <span>Добавить фотографии</span>
             </button>
@@ -31,7 +31,7 @@
           <div class="title">
             <span>Ошибка загрузки. Попробуйте еще раз.</span>
           </div>
-          <div class="btn btn_wrap">
+          <div class="btn btn_wrap btn_ok">
             <button>
               <span>Ok</span>
             </button>
