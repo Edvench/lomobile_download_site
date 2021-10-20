@@ -36,27 +36,14 @@
         align-items: center;
         margin-top: 20px;
         // margin-bottom: 314px;
-        margin-bottom: 34vh;
-        overflow: scroll;
+        // margin-bottom: 34vh;
+        // overflow: scroll;
         overflow-x:hidden;
-    }
-
-    .content::-webkit-scrollbar {
-        width: 5px;
-        background-color: #f9f9fd;
-    }
-
-    .content::-webkit-scrollbar-thumb {
-        border-radius: 0px;
-        background-color: #18aaaa;
-    }
-
-    .content::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
-        background-color: #f9f9fd;
+        overflow-y:hidden;
     }
 }
 
 app-slider {
+    width: 100%;
     height: 100%;
 }
