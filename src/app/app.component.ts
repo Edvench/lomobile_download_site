@@ -7,6 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'lomobsite';
-  public loading:boolean = false;
-  public gallery:boolean = true;
+  public loading:boolean = true;
+  public gallery:boolean = false;
+  public main:boolean = false;
+  public error:boolean = false;
+  public success:boolean = false;
 }

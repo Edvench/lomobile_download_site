@@ -5,7 +5,47 @@
     </div>
     <div class="content">
       <app-slider *ngIf="gallery"></app-slider>
-      <app-preloader *ngIf="loading"></app-preloader>
+      <ng-container *ngIf="loading">
+        <div class="content_wrap">
+          <div class="title">
+            <span>Фотографии загружаются</span>
+          </div>
+          <app-preloader></app-preloader>
+        </div>
+      </ng-container>
+      <ng-container #main *ngIf="main">
+        <div class="content_wrap">
+          <div class="title">
+            <span>Выберите фотографии для загрузки в Lomobil</span>
+          </div>
+          <div class="btn btn_wrap">
+            <button>
+              <i class="icon icon-download"></i>
+              <span>Добавить фотографии</span>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container #main *ngIf="error">
+        <div class="content_wrap">
+          <div class="title">
+            <span>Ошибка загрузки. Попробуйте еще раз.</span>
+          </div>
+          <div class="btn btn_wrap">
+            <button>
+              <span>Ok</span>
+            </button>
+          </div>
+        </div>
+      </ng-container>
+      <ng-container #main *ngIf="success">
+        <div class="content_wrap">
+          <i class="icon icon-success"></i>
+          <div class="title">
+            <span>Фотографии успешно загружены!</span>
+          </div>
+        </div>
+      </ng-container>
     </div>
   </div>
 </div>

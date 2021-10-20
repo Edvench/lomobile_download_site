@@ -25,4 +25,13 @@
         background-image: url(./../img/svg/add.svg);
         background-position: center;
     }
+
+    &-success {
+        width: 160px;
+        height: 160px;
+        background-color: transparent;
+        background-image: url(./../img/svg/success.svg);
+        background-position: center;
+        
+    }
 }
