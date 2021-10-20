@@ -83,9 +83,14 @@ export class SliderComponent implements OnInit {
     console.log(number)
     for (let i = 0; i < number; i++) {
       file = event.target.files[i]
+      let reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        console.log(reader.result);
+    };
       fileName = file.name
       console.log(fileName)
-      this.gallery.push(file)
+      this.gallery.push(reader.result)
     }
     console.log(this.gallery)
   }
