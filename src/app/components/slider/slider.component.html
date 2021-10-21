@@ -6,11 +6,15 @@
       <img src="../../../assets/img/svg/close.svg" class="img_delete" (click)="deleteEl(photo,i)">
     </div>
   </div>
-  <div class="btn_add">
-    <button>
-      <i class="icon icon-download"></i>
-      <span>Добавить фотографии</span>
-    </button>
-  </div>
-  <input type="file" multiple (change)="onFileChanged($event)">
+
+ 
+    <div class="btn_add">
+      <button>
+        <label for="upload-photo"></label>
+        <i class="icon icon-download"></i>
+        <span>Добавить фотографии</span>
+      </button>
+    </div>
+  
+  <input type="file" multiple (change)="onFileChanged($event)" id="upload-photo">
 </div>
