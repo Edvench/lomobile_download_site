@@ -35,12 +35,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 20px;
+        // margin-top: 20px;
         // margin-bottom: 314px;
         // margin-bottom: 34vh;
         // overflow: scroll;
         overflow-x: hidden;
         overflow-y: hidden;
+        // padding-bottom: 120px;
     }
 }
 
@@ -154,5 +155,10 @@ app-slider {
 button{
     cursor: pointer;
 }
+
+.padding_content{
+    padding-bottom: 120px;
+}
+
 
 

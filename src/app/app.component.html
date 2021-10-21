@@ -3,7 +3,7 @@
     <div class="header">
       <i class="icon icon-l"></i>
     </div>
-    <div class="content">
+    <div class="content" [class.padding_content]="padding == true">
       <ng-container *ngIf="gallery">
         <!-- <div class="gallery_wrap"> -->
           <app-slider></app-slider>

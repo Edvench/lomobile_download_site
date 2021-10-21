@@ -40,7 +40,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     button {
         position: relative;
         background: #ffffff;
@@ -68,7 +68,8 @@
 
 
 .photo_wrap{
-    height: 69%;
+    height: 100%;
+    padding-top: 20px;
     overflow: scroll;
     overflow-x:hidden;
 }

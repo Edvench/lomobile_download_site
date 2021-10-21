@@ -12,6 +12,7 @@ export class AppComponent {
   public gallery: boolean = false;
   public error: boolean = false;
   public success: boolean = false;
+  public padding:boolean = false;
 
   ngOnInit(): void {
     this.main = true;
@@ -22,11 +23,13 @@ export class AppComponent {
       case 'gallery':
         this.main = false;
         this.gallery = true;
+        this.padding = true;
         break;
 
         case 'status':
         this.gallery = false;
-        this.loading = true 
+        this.padding = false;
+        this.loading = true;
         setTimeout(() => {
           this.loading = false;
           this.success = true;
