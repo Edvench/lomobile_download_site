@@ -96,9 +96,9 @@ app-slider {
     align-items: center;
 }
 
-.btn_wrap{
-    margin-top: 24px;
-}
+// .btn_wrap{
+//     margin-top: 24px;
+// }
 
 .btn_ok button{
     height: 38px !important;
@@ -144,6 +144,15 @@ app-slider {
             }
         }
     }
+}
+
+.gallery_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    cursor: pointer;
 }
 
 

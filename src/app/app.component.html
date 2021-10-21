@@ -1,19 +1,21 @@
 <div class="container">
   <div class="lomobil_wrapper">
     <div class="header">
-      <h1>LOMOBIL</h1>
+      <i class="icon icon-l"></i>
     </div>
     <div class="content">
       <ng-container *ngIf="gallery">
-        <app-slider></app-slider>
-        <div class="download">
-          <div class="btn_wrap">
-            <button (click)="navigate('status')">
-              <i class="icon icon-download"></i>
-              <span>Загрузить</span>
-            </button>
+        <!-- <div class="gallery_wrap"> -->
+          <app-slider></app-slider>
+          <div class="download">
+            <div class="btn_wrap">
+              <button (click)="navigate('status')">
+                <i class="icon icon-download"></i>
+                <span>Загрузить</span>
+              </button>
+            </div>
           </div>
-        </div>
+        <!-- </div> -->
       </ng-container>
       <ng-container *ngIf="loading">
         <div class="content_wrap">
@@ -30,8 +32,8 @@
           </div>
           <div class="btn btn_wrap">
             <button (click)="navigate('gallery')">
-              <i class="icon icon-download"></i>
-              <span>Добавить фотографии</span>
+              <i class="icon icon-photo"></i>
+              <span>Выбрать фотографии</span>
             </button>
           </div>
         </div>
@@ -59,5 +61,3 @@
     </div>
   </div>
 </div>
-
-
