@@ -27,8 +27,8 @@
     position: absolute;
     right: -22px;
     top: 0px;
-    width: 44px !important;
-    height: 44px;
+    width: 32px !important;
+    height: 32px;
     background: #ffffff;
     box-shadow: 0px 12px 20px rgb(0 0 0 / 20%);
     border-radius: 100px !important;
@@ -53,6 +53,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
         span {
             font-family: Panton;
             font-weight: 600;
@@ -105,3 +106,25 @@ label{
  button{
      cursor: pointer;
  }
+
+ @media (max-width: 900px) {
+    .btn_add button span{
+        font-size: 16px;
+    }
+    .gallery{
+        // padding-left: 0px;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .btn_add button{
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+ }
+
+ @media (max-width: 475px){
+    .gallery{
+        grid-template-columns: repeat(2, 1fr)
+    }
+ }
+ 

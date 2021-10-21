@@ -160,5 +160,36 @@ button{
     padding-bottom: 120px;
 }
 
+@media (max-width: 900px) {
+    .lomobil_wrapper{
+        margin-left: 12px;
+        margin-right: 12px;
+    }
 
+    .title {
+        font-size: 16px;
+    }
+
+    .btn {
+        button {
+            span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .content_wrap{
+        margin-left: 16px;
+        margin-right: 16px ;
+    }
+
+    .lomobil_wrapper .content{
+        // padding-left: 16px;
+        // padding-right: 16px;
+    }
+
+    .download .btn_wrap button span{
+        font-size: 16px;
+    }
+  }
 
