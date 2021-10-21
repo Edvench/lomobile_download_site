@@ -77,7 +77,8 @@ export class SliderComponent implements OnInit {
   public onFileChanged(event: any) {
     const endpoint = '././assets/img/';
     let file: any;
-    let fileName:any;
+    let obj: any;
+    let pathImage: any;
     const fileList: FileList = event.target.files || [];
     let number = fileList.length
     console.log(number)
@@ -86,11 +87,15 @@ export class SliderComponent implements OnInit {
       let reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
-        console.log(reader.result);
-    };
-      fileName = file.name
-      console.log(fileName)
-      this.gallery.push(reader.result)
+        pathImage = reader.result
+
+        obj = {
+          path: pathImage
+        }
+        console.log(obj);
+        this.gallery.push(obj)
+      };
+
     }
     console.log(this.gallery)
   }
