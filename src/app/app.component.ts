@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FileUploadService } from './services/file-upload.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent {
   public error: boolean = false;
   public success: boolean = false;
   public padding:boolean = false;
+
+  constructor(private uploadService:FileUploadService) { }
 
   ngOnInit(): void {
     this.main = true;
@@ -45,5 +48,10 @@ export class AppComponent {
       default:
         break;
     }
+  }
+
+  public upload():void{
+    this.uploadService.uploadPhoto(this.uploadService.gallery).subscribe(()=>{});
+    console.log(12425454345)
   }
 }

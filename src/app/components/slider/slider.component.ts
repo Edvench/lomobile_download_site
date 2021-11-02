@@ -1,4 +1,5 @@
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { FileUploadService } from 'src/app/services/file-upload.service';
 import { MockService } from 'src/app/services/mock.service';
 
 @Component({
@@ -64,7 +65,8 @@ export class SliderComponent implements OnInit {
     },
   ];
 
-  constructor(private mocks: MockService) { }
+  constructor(private mocks: MockService,
+              private uploadService:FileUploadService) { }
 
   ngOnInit(): void {
     console.log(this.gallery)
@@ -72,6 +74,7 @@ export class SliderComponent implements OnInit {
 
   public deleteEl(slide: any, i: any): any {
     this.gallery.splice(i, 1);
+    this.uploadService.gallery = this.gallery
   }
 
   public onFileChanged(event: any) {
@@ -94,6 +97,7 @@ export class SliderComponent implements OnInit {
         }
         console.log(obj);
         this.gallery.push(obj)
+        this.uploadService.gallery = this.gallery
       };
 
     }
