@@ -2,7 +2,7 @@
   <div class="gallery">
 
     <div *ngFor="let photo of gallery; index as i" class="photo">
-      <img [src]="photo.path">
+      <img [src]="photo">
       <img src="../../../assets/img/svg/close.svg" class="img_delete" (click)="deleteEl(photo,i)">
     </div>
   </div>

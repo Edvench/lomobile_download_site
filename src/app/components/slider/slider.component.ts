@@ -8,62 +8,7 @@ import { MockService } from 'src/app/services/mock.service';
   styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit {
-  public gallery: any = [
-    {
-      path: '././assets/img/photo_1.jpg'
-    },
-    {
-      path: '././assets/img/photo_2.jpg'
-    },
-    {
-      path: '././assets/img/photo_3.jpg'
-    },
-    {
-      path: '././assets/img/photo_4.jpg'
-    },
-    {
-      path: '././assets/img/photo_5.jpg'
-    },
-    {
-      path: '././assets/img/photo_6.jpg'
-    },
-    {
-      path: '././assets/img/photo_1.jpg'
-    },
-    {
-      path: '././assets/img/photo_2.jpg'
-    },
-    {
-      path: '././assets/img/photo_3.jpg'
-    },
-    {
-      path: '././assets/img/photo_4.jpg'
-    },
-    {
-      path: '././assets/img/photo_5.jpg'
-    },
-    {
-      path: '././assets/img/photo_6.jpg'
-    },
-    {
-      path: '././assets/img/photo_1.jpg'
-    },
-    {
-      path: '././assets/img/photo_2.jpg'
-    },
-    {
-      path: '././assets/img/photo_3.jpg'
-    },
-    {
-      path: '././assets/img/photo_4.jpg'
-    },
-    {
-      path: '././assets/img/photo_5.jpg'
-    },
-    {
-      path: '././assets/img/photo_6.jpg'
-    },
-  ];
+  public gallery: any = [ ];
 
   constructor(private mocks: MockService,
               private uploadService:FileUploadService) { }
@@ -93,10 +38,11 @@ export class SliderComponent implements OnInit {
         pathImage = reader.result
 
         obj = {
-          path: pathImage
+          pathImage
         }
-        console.log(obj);
-        this.gallery.push(obj)
+        // console.log(obj);
+        this.gallery.push(pathImage)
+        console.log(this.gallery)
         this.uploadService.gallery = this.gallery
       };
 
