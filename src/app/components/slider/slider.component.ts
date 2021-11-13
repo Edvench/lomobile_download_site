@@ -8,13 +8,13 @@ import { MockService } from 'src/app/services/mock.service';
   styleUrls: ['./slider.component.scss'],
 })
 export class SliderComponent implements OnInit {
-  public gallery: any = [ ];
+  public gallery: any = [];
 
   constructor(private mocks: MockService,
               private uploadService:FileUploadService) { }
 
   ngOnInit(): void {
-    console.log(this.gallery)
+    this.uploadService.gallery.length ? this.gallery = this.uploadService.gallery : null;
   }
 
   public deleteEl(slide: any, i: any): any {
@@ -29,7 +29,6 @@ export class SliderComponent implements OnInit {
     let pathImage: any;
     const fileList: FileList = event.target.files || [];
     let number = fileList.length
-    console.log(number)
     for (let i = 0; i < number; i++) {
       file = event.target.files[i]
       let reader = new FileReader();
@@ -40,14 +39,11 @@ export class SliderComponent implements OnInit {
         obj = {
           pathImage
         }
-        // console.log(obj);
         this.gallery.push(pathImage)
-        console.log(this.gallery)
         this.uploadService.gallery = this.gallery
       };
 
     }
-    console.log(this.gallery)
   }
 
 }

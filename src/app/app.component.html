@@ -3,61 +3,61 @@
     <div class="header">
       <i class="icon icon-l"></i>
     </div>
-    <div class="content" [class.padding_content]="padding == true">
-      <ng-container *ngIf="gallery">
+    <div class="content" [class.padding_content]="viewTemplate === 'gallery'">
+      <div *ngIf="viewTemplate === 'gallery'">
         <!-- <div class="gallery_wrap"> -->
           <app-slider></app-slider>
           <div class="download">
             <div class="btn_wrap">
-              <button (click)="navigate('status');upload()">
+              <button [disabled]="!uploadService.gallery.length" (click)="changeView('status')">
                 <i class="icon icon-download"></i>
                 <span>Загрузить</span>
               </button>
             </div>
           </div>
         <!-- </div> -->
-      </ng-container>
-      <ng-container *ngIf="loading">
+      </div>
+      <div *ngIf="viewTemplate === 'loading'">
         <div class="content_wrap">
           <div class="title">
             <span>Фотографии загружаются</span>
           </div>
           <app-preloader></app-preloader>
         </div>
-      </ng-container>
-      <ng-container #main *ngIf="main">
+      </div>
+      <div *ngIf="viewTemplate === 'main'">
         <div class="content_wrap">
           <div class="title">
             <span>Выберите фотографии для загрузки в Lomobil</span>
           </div>
           <div class="btn btn_wrap">
-            <button (click)="navigate('gallery')">
+            <button (click)="changeView('gallery')">
               <i class="icon icon-photo"></i>
               <span>Выбрать фотографии</span>
             </button>
           </div>
         </div>
-      </ng-container>
-      <ng-container #main *ngIf="error">
+      </div>
+      <div *ngIf="viewTemplate === 'error'">
         <div class="content_wrap">
           <div class="title">
             <span>Ошибка загрузки. Попробуйте еще раз.</span>
           </div>
           <div class="btn btn_wrap btn_ok">
-            <button>
+            <button (click)="changeView('gallery')">
               <span>Ok</span>
             </button>
           </div>
         </div>
-      </ng-container>
-      <ng-container #main *ngIf="success">
+      </div>
+      <div *ngIf="viewTemplate === 'success'">
         <div class="content_wrap">
           <i class="icon icon-success"></i>
           <div class="title">
             <span>Фотографии успешно загружены!</span>
           </div>
         </div>
-      </ng-container>
+      </div>
     </div>
   </div>
 </div>

@@ -7,13 +7,12 @@ import { Observable } from 'rxjs';
 })
 export class FileUploadService {
 
-  public gallery:any;
+  public gallery = [];
 
   constructor(private httpClient:HttpClient) { }
 
-  public uploadPhoto(photoBase64mas: any): Observable<any> {
-    console.log(photoBase64mas)
-    return this.httpClient.post(`api/client/source/selfie`,(photoBase64mas), {
+  public uploadPhoto(photoBase64mas: string[], identity: string): Observable<any> {
+    return this.httpClient.post(`/download/images/${identity}`,(photoBase64mas), {
       headers: {
         'Content-Type': 'application/json',
           }
